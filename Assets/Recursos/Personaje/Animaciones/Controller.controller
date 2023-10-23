@@ -28,7 +28,7 @@ BlendTree:
     m_Motion: {fileID: 7400000, guid: 6015b6896c313f94fa4a25a8b9bcd349, type: 2}
     m_Threshold: 0.4
     m_Position: {x: 0, y: -1}
-    m_TimeScale: 1
+    m_TimeScale: -1
     m_CycleOffset: 0
     m_DirectBlendParameter: 
     m_Mirror: 0
@@ -69,19 +69,19 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: VelX
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: VelY
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -132,7 +132,7 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 272623030846708901}
-    m_Position: {x: 513.8688, y: 103.652115, z: 0}
+    m_Position: {x: 380, y: 90, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
