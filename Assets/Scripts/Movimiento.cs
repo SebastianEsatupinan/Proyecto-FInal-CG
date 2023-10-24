@@ -38,12 +38,17 @@ public class LogicaMovimiento : MonoBehaviour
 
         if (isGrounded)
         {
-            //    Anim.SetBool("Salto", false);
+            Anim.SetBool("Jumping", false);
+            Anim.SetBool("Fall", false);
 
             if (Input.GetButtonDown("Jump"))
             {
                 Jump();
             }
+        }
+        else
+        {
+            Anim.SetBool("Fall", true);
         }
 
 
@@ -51,7 +56,7 @@ public class LogicaMovimiento : MonoBehaviour
 
     public void Jump()
     {
-        //Anim.SetBool("Salto", true);
+        Anim.SetBool("Jumping", true);
         rgbd.AddForce(Vector3.up * JumpForce, ForceMode.Impulse);      
     }
 }
