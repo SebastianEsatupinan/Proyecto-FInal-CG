@@ -45,7 +45,7 @@ public class LogicaMovimiento : MonoBehaviour
             {
                 Jump();
             }
-        }
+    }
         else
         {
             Anim.SetBool("Fall", true);
