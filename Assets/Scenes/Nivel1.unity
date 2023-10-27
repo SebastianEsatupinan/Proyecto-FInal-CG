@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.2257134, b: 0.30692226, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 4391889}
   - component: {fileID: 4391888}
   m_Layer: 0
-  m_Name: Plane (1)
+  m_Name: Fondo del Mapa
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -154,7 +154,7 @@ Transform:
   m_LocalScale: {x: 81.338455, y: 81.338455, z: 81.338455}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1475243628}
+  m_Father: {fileID: 1638288313}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!64 &4391888
@@ -388,6 +388,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Personaje
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 40a66681c10b38441b8ca6a51f966961,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: 40a66681c10b38441b8ca6a51f966961,
         type: 3}
@@ -625,6 +630,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 258473732}
   m_CullTransparentMesh: 1
+--- !u!1 &288160265
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 288160266}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &288160266
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 288160265}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &343655524
 GameObject:
   m_ObjectHideFlags: 0
@@ -743,6 +779,37 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
+--- !u!1 &378564810
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 378564811}
+  m_Layer: 0
+  m_Name: PuntoDeSpawn
+  m_TagString: Respawn
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &378564811
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 378564810}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.609, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1475243628}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &487233879
 GameObject:
   m_ObjectHideFlags: 0
@@ -781,11 +848,15 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1475243628}
+    m_TransformParent: {fileID: 872524529}
     m_Modifications:
     - target: {fileID: 100000, guid: c2391e8a6bdf5424194b61e41952a40a, type: 3}
       propertyPath: m_Name
       value: Cloud_06 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: c2391e8a6bdf5424194b61e41952a40a, type: 3}
+      propertyPath: m_TagString
+      value: Suelo
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c2391e8a6bdf5424194b61e41952a40a, type: 3}
       propertyPath: m_RootOrder
@@ -1015,6 +1086,52 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 3028648586102108281}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &872524528
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 872524529}
+  m_Layer: 0
+  m_Name: Plataformas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &872524529
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 872524528}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1403687184}
+  - {fileID: 212093676}
+  - {fileID: 129108767}
+  - {fileID: 193589670}
+  - {fileID: 768496636}
+  - {fileID: 1874628214}
+  - {fileID: 2030396942}
+  - {fileID: 1152790164}
+  - {fileID: 168600731}
+  - {fileID: 827956794}
+  - {fileID: 2146979542}
+  - {fileID: 130627517}
+  - {fileID: 1660467828}
+  - {fileID: 1449023771}
+  - {fileID: 1696897838}
+  m_Father: {fileID: 1475243628}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1152790160 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6527882976218903999, guid: 9d6ac3e7f6950614aa5ae96eec6797b2,
@@ -1068,8 +1185,8 @@ GameObject:
   - component: {fileID: 1449023769}
   - component: {fileID: 1449023768}
   m_Layer: 0
-  m_Name: Plane
-  m_TagString: Untagged
+  m_Name: Plataforma de entrada
+  m_TagString: Suelo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1158,7 +1275,7 @@ Transform:
   m_LocalScale: {x: 0.53101766, y: 1, z: 0.6050634}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1475243628}
+  m_Father: {fileID: 872524529}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1475243627
@@ -1189,25 +1306,44 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1403687184}
-  - {fileID: 212093676}
-  - {fileID: 129108767}
-  - {fileID: 193589670}
-  - {fileID: 768496636}
-  - {fileID: 1874628214}
-  - {fileID: 2030396942}
-  - {fileID: 1152790164}
-  - {fileID: 168600731}
-  - {fileID: 827956794}
-  - {fileID: 2146979542}
-  - {fileID: 130627517}
-  - {fileID: 1660467828}
-  - {fileID: 1449023771}
-  - {fileID: 184749797}
-  - {fileID: 4391887}
-  - {fileID: 1696897838}
+  - {fileID: 872524529}
+  - {fileID: 1638288313}
+  - {fileID: 378564811}
   m_Father: {fileID: 0}
   m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1638288312
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1638288313}
+  m_Layer: 0
+  m_Name: Decoraciones
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1638288313
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1638288312}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 184749797}
+  - {fileID: 4391887}
+  m_Father: {fileID: 1475243628}
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1660467823
 PrefabInstance:
@@ -1215,7 +1351,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1475243628}
+    m_TransformParent: {fileID: 872524529}
     m_Modifications:
     - target: {fileID: 5448275695168917626, guid: 3c87b8541e22c3840b498d9d4272213d,
         type: 3}
@@ -1277,6 +1413,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cloud_01 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5448275695169408090, guid: 3c87b8541e22c3840b498d9d4272213d,
+        type: 3}
+      propertyPath: m_TagString
+      value: Suelo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1333,7 +1474,7 @@ GameObject:
   - component: {fileID: 1696897840}
   - component: {fileID: 1696897839}
   m_Layer: 0
-  m_Name: Plane (2)
+  m_Name: Plataforma de salida
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1351,7 +1492,7 @@ Transform:
   m_LocalScale: {x: 0.53101766, y: 1, z: 0.6050634}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1475243628}
+  m_Father: {fileID: 872524529}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!64 &1696897839
@@ -1639,7 +1780,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1475243628}
+    m_TransformParent: {fileID: 1638288313}
     m_Modifications:
     - target: {fileID: 400010, guid: d0223f77114284b47a0e8b317e71e4dc, type: 3}
       propertyPath: m_RootOrder
@@ -2044,12 +2185,17 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1475243628}
+    m_TransformParent: {fileID: 872524529}
     m_Modifications:
     - target: {fileID: 8459081383603169156, guid: cea6e91fdd7e57447bc744cdb472c0ec,
         type: 3}
       propertyPath: m_Name
       value: Cloud_06
+      objectReference: {fileID: 0}
+    - target: {fileID: 8459081383603169156, guid: cea6e91fdd7e57447bc744cdb472c0ec,
+        type: 3}
+      propertyPath: m_TagString
+      value: Suelo
       objectReference: {fileID: 0}
     - target: {fileID: 8459081383603534756, guid: cea6e91fdd7e57447bc744cdb472c0ec,
         type: 3}
@@ -2121,7 +2267,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1475243628}
+    m_TransformParent: {fileID: 872524529}
     m_Modifications:
     - target: {fileID: 1359532889190599750, guid: d000a942b48c7d04086793dd0b353d8f,
         type: 3}
@@ -2131,12 +2277,12 @@ PrefabInstance:
     - target: {fileID: 1359532889190599750, guid: d000a942b48c7d04086793dd0b353d8f,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.092076406
+      value: 0.09207641
       objectReference: {fileID: 0}
     - target: {fileID: 1359532889190599750, guid: d000a942b48c7d04086793dd0b353d8f,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.092076406
+      value: 0.09207641
       objectReference: {fileID: 0}
     - target: {fileID: 1359532889190599750, guid: d000a942b48c7d04086793dd0b353d8f,
         type: 3}
@@ -2193,6 +2339,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cloud_02
       objectReference: {fileID: 0}
+    - target: {fileID: 1359532889190764646, guid: d000a942b48c7d04086793dd0b353d8f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Suelo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2208,7 +2359,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1475243628}
+    m_TransformParent: {fileID: 872524529}
     m_Modifications:
     - target: {fileID: 8816315567288380289, guid: 49626533aeed5e045ba07525d5d917c1,
         type: 3}
@@ -2270,6 +2421,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cloud_04
       objectReference: {fileID: 0}
+    - target: {fileID: 8816315567288874913, guid: 49626533aeed5e045ba07525d5d917c1,
+        type: 3}
+      propertyPath: m_TagString
+      value: Suelo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2285,12 +2441,17 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1475243628}
+    m_TransformParent: {fileID: 872524529}
     m_Modifications:
     - target: {fileID: 6527882976218903999, guid: 9d6ac3e7f6950614aa5ae96eec6797b2,
         type: 3}
       propertyPath: m_Name
       value: Cloud_05
+      objectReference: {fileID: 0}
+    - target: {fileID: 6527882976218903999, guid: 9d6ac3e7f6950614aa5ae96eec6797b2,
+        type: 3}
+      propertyPath: m_TagString
+      value: Suelo
       objectReference: {fileID: 0}
     - target: {fileID: 6527882976219326879, guid: 9d6ac3e7f6950614aa5ae96eec6797b2,
         type: 3}
@@ -2362,12 +2523,17 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1475243628}
+    m_TransformParent: {fileID: 872524529}
     m_Modifications:
     - target: {fileID: 6541878569614809125, guid: f1727d31642263c4a98277c377e36a44,
         type: 3}
       propertyPath: m_Name
       value: Rock Type5 04
+      objectReference: {fileID: 0}
+    - target: {fileID: 6541878569614809125, guid: f1727d31642263c4a98277c377e36a44,
+        type: 3}
+      propertyPath: m_TagString
+      value: Suelo
       objectReference: {fileID: 0}
     - target: {fileID: 6541878569615066665, guid: f1727d31642263c4a98277c377e36a44,
         type: 3}
@@ -2435,7 +2601,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1475243628}
+    m_TransformParent: {fileID: 872524529}
     m_Modifications:
     - target: {fileID: 2160774679578034261, guid: b7a2de546b83b9d48850050bf2a47466,
         type: 3}
@@ -2497,6 +2663,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cloud_03
       objectReference: {fileID: 0}
+    - target: {fileID: 2160774679578532981, guid: b7a2de546b83b9d48850050bf2a47466,
+        type: 3}
+      propertyPath: m_TagString
+      value: Suelo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2512,7 +2683,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1475243628}
+    m_TransformParent: {fileID: 872524529}
     m_Modifications:
     - target: {fileID: 3710533954207740441, guid: f36c9163a02643145b5c0ec6e2fa6548,
         type: 3}
@@ -2574,6 +2745,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock Type2 01
       objectReference: {fileID: 0}
+    - target: {fileID: 3710533954207818551, guid: f36c9163a02643145b5c0ec6e2fa6548,
+        type: 3}
+      propertyPath: m_TagString
+      value: Suelo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2585,12 +2761,17 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1475243628}
+    m_TransformParent: {fileID: 872524529}
     m_Modifications:
     - target: {fileID: 1223969224847818559, guid: ccb1f9287d267414691f191adec24078,
         type: 3}
       propertyPath: m_Name
       value: Rock Type1 01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1223969224847818559, guid: ccb1f9287d267414691f191adec24078,
+        type: 3}
+      propertyPath: m_TagString
+      value: Suelo
       objectReference: {fileID: 0}
     - target: {fileID: 1223969224848241577, guid: ccb1f9287d267414691f191adec24078,
         type: 3}
@@ -2658,7 +2839,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1475243628}
+    m_TransformParent: {fileID: 872524529}
     m_Modifications:
     - target: {fileID: 5448275695168917626, guid: 3c87b8541e22c3840b498d9d4272213d,
         type: 3}
@@ -2730,6 +2911,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cloud_01
       objectReference: {fileID: 0}
+    - target: {fileID: 5448275695169408090, guid: 3c87b8541e22c3840b498d9d4272213d,
+        type: 3}
+      propertyPath: m_TagString
+      value: Suelo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2745,7 +2931,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1475243628}
+    m_TransformParent: {fileID: 872524529}
     m_Modifications:
     - target: {fileID: 1989585811411728091, guid: a62acdbb4b5bd134ba74c3ec17cd1a57,
         type: 3}
@@ -2807,6 +2993,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock Type1 01 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1989585811411892813, guid: a62acdbb4b5bd134ba74c3ec17cd1a57,
+        type: 3}
+      propertyPath: m_TagString
+      value: Suelo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2818,7 +3009,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1475243628}
+    m_TransformParent: {fileID: 872524529}
     m_Modifications:
     - target: {fileID: 6340488239776877427, guid: 7f166a3128056e34d8b82e7d640ee8e3,
         type: 3}
@@ -2879,6 +3070,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock Type6 03
+      objectReference: {fileID: 0}
+    - target: {fileID: 6340488239777133689, guid: 7f166a3128056e34d8b82e7d640ee8e3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Suelo
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LogicaMovimiento : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     public float MovementSpeed = 5.0f;
     public float RotationSpeed = 200.0f;
