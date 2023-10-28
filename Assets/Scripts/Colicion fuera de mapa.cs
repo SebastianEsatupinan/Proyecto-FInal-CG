@@ -1,18 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
 
-public class Colicionfuerademapa : MonoBehaviour
+public class Colisionfuerademapa : MonoBehaviour
 {
     public GameObject puntoSpawn;
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if( collision.gameObject.tag == "Player")
+
+        if (other.tag == "Player")
         {
-            Debug.Log("Saliste del Mapa");
-            transform.position = puntoSpawn.transform.position;
+            Debug.Log("Saliste del mapa");
+            other.transform.position = puntoSpawn.transform.position;
         }
     }
 }
