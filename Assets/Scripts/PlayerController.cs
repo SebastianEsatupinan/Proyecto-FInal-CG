@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
     public float x, y;
     public float JumpForce = 8.0f;
     private bool isGrounded = true;
-
+    private float timeInAir = 0.0f;
 
     private Rigidbody rgbd;
 
@@ -40,6 +40,7 @@ public class PlayerController : MonoBehaviour
         {
             Anim.SetBool("Jumping", false);
             Anim.SetBool("Fall", false);
+            timeInAir = 0.0f;
 
             if (Input.GetButtonDown("Jump"))
             {
@@ -48,7 +49,13 @@ public class PlayerController : MonoBehaviour
     }
         else
         {
-            Anim.SetBool("Fall", true);
+            timeInAir += Time.deltaTime;
+
+            // Si el tiempo en el aire es mayor o igual a 2 segundos, inicia la animación de caída
+            if (timeInAir >= 0.5f)
+            {
+                Anim.SetBool("Fall", true);
+            }
         }
 
 
