@@ -1,27 +1,35 @@
 using UnityEngine;
+using TMPro; // Asegúrate de importar el espacio de nombres necesario
 
 public class ButtonController : MonoBehaviour
 {
-    public string targetTag = "Boton"; // Asigna el tag que deben tener los objetos clickeables
-    public GateMover gate1;
-    public GateMover gate2;
+    public GameObject objeto1;
+    public GameObject objeto2;
+    public TextMeshProUGUI textoTMP; // Asigna tu objeto TextMeshPro desde el Inspector
 
-    void Update()
+    void OnMouseDown()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
+        DesactivarObjetos();
+        CambiarTexto();
+    }
 
-            if (Physics.Raycast(ray, out hit))
-            {
-                // Verifica si el objeto clickeado tiene el tag deseado
-                if (hit.collider != null && hit.collider.CompareTag(targetTag))
-                {
-                    gate1.OpenGate();
-                    gate2.OpenGate();
-                }
-            }
+    void DesactivarObjetos()
+    {
+        // Desactivar los objetos
+        objeto1.SetActive(false);
+        objeto2.SetActive(false);
+    }
+
+    void CambiarTexto()
+    {
+        // Cambiar el texto del objeto TextMeshPro
+        if (textoTMP != null)
+        {
+            textoTMP.text = "¡Bien hecho! ahora encuentra la salida";
+        }
+        else
+        {
+            Debug.LogWarning("No se ha asignado un objeto TextMeshPro para cambiar el texto.");
         }
     }
 }
