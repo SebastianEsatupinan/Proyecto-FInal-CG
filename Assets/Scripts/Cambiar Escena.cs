@@ -12,16 +12,4 @@ public class CambioDeEscena : MonoBehaviour
         // Cargar la escena por su nombre
         SceneManager.LoadScene(nombreDeEscena);
     }
-
-    // Llamado cuando este objeto colisiona con otro
-    private void OnTriggerEnter(Collider other)
-    {
-
-        if (other.tag == "Player")
-        {
-            Debug.Log("Pasaste al nivel 3");
-            // Llamada al método para cambiar de escena
-            CambiarEscena();
-        }
-    }
 }
