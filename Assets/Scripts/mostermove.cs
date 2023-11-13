@@ -5,19 +5,31 @@ using UnityEngine;
 public class movimiento : MonoBehaviour
 {
     public float velocidad = 5.0f; // Velocidad de movimiento
-    public float rangoX = 10.0f;   // Rango de movimiento en el eje X
-    public float rangoZ = 10.0f;   // Rango de movimiento en el eje Z
 
     void Update()
     {
-        // Calcula un valor aleatorio para el eje X y Z
-        float movimientoX = Random.Range(-rangoX, rangoX);
-        float movimientoZ = Random.Range(-rangoZ, rangoZ);
+        // Mueve el objeto en su dirección actual
+        transform.Translate(Vector3.forward * velocidad * Time.deltaTime);
 
-        // Calcula el desplazamiento en la dirección deseada
-        Vector3 desplazamiento = new Vector3(movimientoX, 0, movimientoZ);
+        // Mantén la rotación en el eje Y constante
+        transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
+    }
 
-        // Mueve el objeto en la dirección calculada
-        transform.Translate(desplazamiento * velocidad * Time.deltaTime);
+    void OnCollisionEnter(Collision collision)
+    {
+        // Cambia la dirección del objeto al colisionar con algo
+        CambiarDireccion();
+    }
+
+    void CambiarDireccion()
+    {
+        // Genera una nueva dirección aleatoria en el plano XZ
+        Vector3 nuevaDireccion = new Vector3(Random.Range(-1f, 1f), 0, Random.Range(-1f, 1f)).normalized;
+
+        // Aplica la nueva dirección al objeto
+        transform.forward = nuevaDireccion;
+
+        // Mantén la rotación en el eje Y constante después de cambiar la dirección
+        transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
     }
 }
