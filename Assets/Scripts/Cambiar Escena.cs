@@ -14,12 +14,11 @@ public class CambioDeEscena : MonoBehaviour
     }
 
     // Llamado cuando este objeto colisiona con otro
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision collision)
     {
-
-        if (other.tag == "Player")
+        // Verificar si la colisión se produce con un objeto que tiene el tag "Player"
+        if (collision.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Pasaste al nivel 3");
             // Llamada al método para cambiar de escena
             CambiarEscena();
         }
