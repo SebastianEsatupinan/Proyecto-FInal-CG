@@ -12,4 +12,14 @@ public class CambioDeEscena : MonoBehaviour
         // Cargar la escena por su nombre
         SceneManager.LoadScene(nombreDeEscena);
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+
+        if (other.tag == "Player")
+        {
+            Debug.Log("Saliste del nivel");
+            CambiarEscena();
+        }
+    }
 }
