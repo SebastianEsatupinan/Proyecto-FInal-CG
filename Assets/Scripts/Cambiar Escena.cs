@@ -12,4 +12,15 @@ public class CambioDeEscena : MonoBehaviour
         // Cargar la escena por su nombre
         SceneManager.LoadScene(nombreDeEscena);
     }
+
+    // Llamado cuando este objeto colisiona con otro
+    private void OnCollisionEnter(Collision collision)
+    {
+        // Verificar si la colisión se produce con un objeto que tiene el tag "Player"
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            // Llamada al método para cambiar de escena
+            CambiarEscena();
+        }
+    }
 }
