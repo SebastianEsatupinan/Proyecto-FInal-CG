@@ -51,8 +51,7 @@ public class PlayerController : MonoBehaviour
         {
             timeInAir += Time.deltaTime;
 
-            // Si el tiempo en el aire es mayor o igual a 2 segundos, inicia la animación de caída
-            if (timeInAir >= 0.5f)
+            if (timeInAir >= 0.8f)
             {
                 Anim.SetBool("Fall", true);
             }
