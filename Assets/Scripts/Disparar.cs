@@ -4,41 +4,33 @@ using UnityEngine;
 
 public class Disparar : MonoBehaviour
 {
-    public GameObject objetoPrefab;  // Prefab del objeto que se generará
-    public float fuerzaDisparo = 10f; // Fuerza con la que el objeto será disparado
-    private Animator animador;
+    public GameObject prefabBala; // Asigna el prefab de la bala desde el editor de Unity
+    public float velocidadDisparo = 10f; // Velocidad de disparo
+    public float salida = 1f; // Distancia a la que saldrá la bala del personaje
 
-    private void Start()
+    // Método que dispara la bala hacia adelante
+    public void DispararBala()
     {
-        animador = GetComponent<Animator>();
+        // Crear una instancia del prefab de la bala
+        GameObject bala = Instantiate(prefabBala, transform.position + transform.forward * salida, transform.rotation);
+
+        // Asegurarse de que la bala se destruya automáticamente después de un tiempo determinado
+        Destroy(bala, 5f);
+
+        // Calcular la dirección hacia la que la bala debe viajar (hacia adelante del personaje)
+        Vector3 direccion = transform.forward;
+
+        // Agregar velocidad a la dirección para que la bala se desplace rápidamente
+        bala.GetComponent<Rigidbody>().velocity = direccion * velocidadDisparo;
     }
 
-    private void Update()
+    // Método Update() que se ejecuta en cada fotograma
+    void Update()
     {
-        // Detectar clic del mouse
+        // Disparar la bala cuando se hace clic izquierdo
         if (Input.GetMouseButtonDown(0))
         {
-            // Reproducir la animación predeterminada
-            animador.SetTrigger("AnimacionPredeterminada");
-
-            // Generar y disparar el objeto
-            GenerarYDispararObjeto();
-        }
-    }
-
-    private void GenerarYDispararObjeto()
-    {
-        // Crear una instancia del objeto prefab
-        GameObject nuevoObjeto = Instantiate(objetoPrefab, transform.position, Quaternion.identity);
-
-        // Obtener la dirección en la que el personaje está mirando
-        Vector3 direccionDisparo = transform.forward;
-
-        // Aplicar fuerza al objeto para dispararlo en la dirección correcta
-        Rigidbody rigidbodyObjeto = nuevoObjeto.GetComponent<Rigidbody>();
-        if (rigidbodyObjeto != null)
-        {
-            rigidbodyObjeto.AddForce(direccionDisparo * fuerzaDisparo, ForceMode.Impulse);
+            DispararBala();
         }
     }
 }
