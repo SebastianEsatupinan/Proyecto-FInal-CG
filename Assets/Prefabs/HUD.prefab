@@ -684,7 +684,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5432626866718140511}
-  - component: {fileID: 8619541242400554203}
   m_Layer: 5
   m_Name: Reloj
   m_TagString: Untagged
@@ -717,21 +716,6 @@ RectTransform:
   m_AnchoredPosition: {x: -0.0000038146973, y: 358}
   m_SizeDelta: {x: 317.9836, y: 88.0791}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &8619541242400554203
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5929043646706529649}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f58011f490c90a24a8c264ebda7a3cb5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timerMinutos: {fileID: 4337787492137073534}
-  timerSegundo: {fileID: 6101515999513621137}
-  timerMilisegundos: {fileID: 1808532135017373431}
 --- !u!1 &7801082845134427719
 GameObject:
   m_ObjectHideFlags: 0

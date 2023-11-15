@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class Timing : MonoBehaviour
 {
+    public static Timing Instance;
     public TextMeshProUGUI timerMinutos;
     public TextMeshProUGUI timerSegundo;
     public TextMeshProUGUI timerMilisegundos;
@@ -20,32 +21,12 @@ public class Timing : MonoBehaviour
     public float TimerTime { get => timerTime; set => timerTime = value; }
     public bool IsRunning { get => isRunning; set => isRunning = value; }
 
-    // Implementación del patrón Singleton
-    private static Timing _instance;
-    public static Timing Instance
-    {
-        get
-        {
-            if (_instance == null)
-            {
-                _instance = FindObjectOfType<Timing>();
-                if (_instance == null)
-                {
-                    GameObject singletonObject = new GameObject("Timing");
-                    _instance = singletonObject.AddComponent<Timing>();
-                }
-            }
-            return _instance;
-        }
-    }
-
     private void Awake()
     {
-        // Asegura que este objeto persista entre escenas
-        if (_instance == null)
+        if(Timing.Instance == null)
         {
-            _instance = this;
-            DontDestroyOnLoad(gameObject);
+            Timing.Instance = this;
+            DontDestroyOnLoad(this.gameObject);
         }
         else
         {
@@ -55,7 +36,11 @@ public class Timing : MonoBehaviour
 
     private void Start()
     {
-        TimerStart();
+        // Solo iniciar el temporizador si no se está ejecutando
+        if (!IsRunning)
+        {
+            TimerStart();
+        }
     }
 
     // Update is called once per frame
@@ -104,7 +89,5 @@ public class Timing : MonoBehaviour
             Debug.Log(stopTime.ToString());
         }
     }
-
-
 
 }
