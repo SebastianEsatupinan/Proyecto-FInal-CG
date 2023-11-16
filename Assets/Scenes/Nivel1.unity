@@ -1929,7 +1929,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1947029474}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &307629542
+--- !u!114 &307629548
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1938,9 +1938,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 307629540}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 644d74744302e844d9b46ed0d11bb4e3, type: 3}
+  m_Script: {fileID: 11500000, guid: 3f5070a3c2d93694fa5336439a72329b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  puntoSpawn: {fileID: 378564810}
 --- !u!1 &309590288
 GameObject:
   m_ObjectHideFlags: 0
@@ -3540,9 +3541,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 508baaff781698943a59340006d3b598, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animacionObjeto: {fileID: 0}
-  tagJugador: Player
-  distanciaActivacion: 5
 --- !u!114 &461003951
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8032,9 +8030,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 508baaff781698943a59340006d3b598, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animacionObjeto: {fileID: 0}
-  tagJugador: Player
-  distanciaActivacion: 5
 --- !u!114 &1109313826
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11074,6 +11069,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: obs10
       objectReference: {fileID: 0}
+    - target: {fileID: 1975907775230989346, guid: 9a248200938eb0b479a2f8c70e5cabca,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2531566375203615427, guid: 9a248200938eb0b479a2f8c70e5cabca,
         type: 3}
       propertyPath: m_RootOrder
@@ -11136,7 +11136,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4376858594334719065, guid: 9a248200938eb0b479a2f8c70e5cabca,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 307629542}
+      addedObject: {fileID: 307629548}
   m_SourcePrefab: {fileID: 100100000, guid: 9a248200938eb0b479a2f8c70e5cabca, type: 3}
 --- !u!4 &1947029475 stripped
 Transform:
@@ -11300,9 +11300,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 508baaff781698943a59340006d3b598, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animacionObjeto: {fileID: 0}
-  tagJugador: Player
-  distanciaActivacion: 5
 --- !u!114 &1986647233
 MonoBehaviour:
   m_ObjectHideFlags: 0
